@@ -6,6 +6,7 @@
 
 var app   = require('../app');
 var debug = require('debug')('nodejs-https-server:server');
+var env = require(./.env);
 //var http  = require('http');
 
 var https = require('https');
@@ -19,7 +20,7 @@ var httpOptions =  {
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT);
 app.set('port', port);
 
 /**
